@@ -7,14 +7,20 @@ class BinarySearch():
 
     # While you haven't narrowed it down to one element ...
     while low <= high:
+
       # ... check the middle element
       mid = (low + high) // 2
       guess = list[mid]
+
       # Found the item.
+      # if guess is equal to item at the first try
       if guess == item:
+        # return the index
         return mid
+
       # The guess was too high.
       if guess > item:
+        
         high = mid - 1
       # The guess was too low.
       else:
